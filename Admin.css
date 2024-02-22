@@ -8,14 +8,25 @@ input{
     color: #fff;
     display: block;
     width: 20vw;
-    /* margin: 2vh 0; */
+    margin: 2vh 0;
     border-width: 0 0 2px 0;
     border-color: #fff;
     padding: 10px 0 3px 7px;
     background-color:#4A5156;
 }
+textarea{
+    margin-top: 10px;
+    height:  8vh;
+    width: 20.4vw;
+    resize: none;
+    
+}
 ::placeholder{
     color: #fff;
+    font-size: 15px;
+}
+textarea::placeholder{
+    color: #4A5156;
     font-size: 15px;
 }
 #button{
@@ -36,10 +47,17 @@ input{
 }
 .inputs{
     /* border: 2px solid red; */
-    padding: 20vh 5vw;
+    padding: 10vh 5vw;
     border-radius: 10px;
     background-color: #4A5156;
 }
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+    padding: 5px;
+    text-align: left;
+  }
 @media (max-width:600px) {
     .container{
         height: 100%;

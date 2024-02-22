@@ -193,6 +193,7 @@ button{
 }
 .card:hover{
     box-shadow: -1px -1px 40px 3px rgb(14, 12, 12);
+    transform: scale(1.05);
 }
 .card h4{
 font-size: 20px;
