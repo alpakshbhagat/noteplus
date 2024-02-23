@@ -58,6 +58,12 @@ th, td {
     padding: 5px;
     text-align: left;
   }
+  .fa-solid{
+    color: #fff;
+    position: relative; 
+    top: 50px; 
+    left: 370px
+  }
 @media (max-width:600px) {
     .container{
         height: 100%;
@@ -80,4 +86,20 @@ th, td {
         padding: 10vh 2vh;
     }
 
+}
+@media (max-width:1400px) {
+    .input img{
+        /* width: 40vmax; */
+        height: 45vmax;
+    }
+    .fa-solid{
+        color: #fff; 
+        position: relative; 
+        top: 48px; 
+        left: 260px;
+    }
+    .inputs{
+        width: 20vw;
+        padding: 5vmin;
+    }
 }

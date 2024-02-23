@@ -39,10 +39,10 @@ require "connect.php";
             <img src="Login-page-character1.png" alt="Admin png">
             <div class="inputs">
                 <form action="" method="POST" enctype="multipart/form-data">
-                    <i class="fa-solid fa-book" style="color: #fff; position: relative; top: 50px; left: 370px" ></i>
+                    <i class="fa-solid fa-book"  ></i>
                     <input type="text" placeholder="Subject" id="Subject" name="subject" required>
                     
-                    <i class="fa-solid fa-chart-bar" style="color: #fff; position: relative; top: 50px; left: 370px"></i>
+                    <i class="fa-solid fa-chart-bar" ></i>
                     <input type="text" placeholder="Unit" name="unit" required>
                     
                     <input type="file" placeholder="file" class="file" accept="application/pdf,application/msword,
