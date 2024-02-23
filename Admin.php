@@ -58,7 +58,30 @@ require "connect.php";
 
         </div>
     </div>
-
+    <!-- footer -->
+    <footer class="footer">
+    <div class="one padding">
+        <h2>Community</h2>
+        <p>Join our community of students and teachers to get the best learning experience.</p>
+        <p>&copy; All rights Reserved | <?php echo date("Y")?></p>
+        
+    </div>
+    <div class="two padding">
+        <a href="index.php">Home</a>
+        <a href="notes.php">Notes</a>
+        <a href="About.php">About</a>
+        <a href="contact.php">Contact</a>
+    </div>
+    <div class="three padding">
+        <div>
+            <img src="github.png" alt="" class="imglog github">
+            <img src="linkedin.png" alt="" class="imglogo">
+            <img src="facebook.png" alt=""  class="secondlogo"  >
+            <img src="instagram.png" alt=""  class="secondlogo">
+        </div>
+        
+    </div>
+</footer>
     <?php
    
 

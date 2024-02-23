@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top{
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+.top h1{
+    font-size: 8vmin;
+    padding: 5vmin 0;
+
+}
+.aboutCard{
+    /* border: 2px solid red; */
+}
+.card1{
+    width: 30vmax;
+}
+.innerdiv{
+    width: 100%;
+}
+.card1{
+    /* border: 2px solid red; */
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5eb0da;
+}
+.aboutCard{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card1 h2{
+    text-align: center;
+    font-size: 3vmin;
+}
+.selfpic{
+    height: 30vmin;
+    width:  30vmin;
+    border-radius: 25%;
+    margin: 2vmin;
+}
+.card1 p{
+    padding: 1vmin 3vmin;
+}
+.git{
+    /* padding-top: 1vmin; */
+    height: 3vmax;
+}
+.linkedin{
+    height: 3vmax;
+    /* padding-top: 1vmin; */
+}
+.instagram{
+    margin-top: .8vmin;
+    height: 2.3vmax;
+    border-radius: 50%;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 4vmin;
+    height: 8vmin;
+}

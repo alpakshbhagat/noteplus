@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -23,15 +24,83 @@
         </ul> 
     </div>
 
+    <!-- main -->
     <div class="container">
-            
-        </div>
+        <div class="innerdiv">
+        
+            <div class="top">
+                <h1>Our Community</h1>
+            </div>
+            <div class="aboutCard">
 
+            <div class="card1">
+                <img src="https://picsum.photos/200" alt=""  class="selfpic"/>
+                <div>
+                <h2>Alpaksh Dogra</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga. Nobis reiciendis, vitae laboriosam natus nesciunt velit dolorem animi delenitiacere accusamus sit id officiis minima officia commodi nostrum! Doloremque expedita dolorem quia explicabo accusamus.</p>
+                <div class="icons">
+                    <a href="https://github.com/alpakshbhagat"><img src="github.png" alt="" class="git"></a>
+                    <a href=""><img src="linkedin.png" alt="" class="linkedin"></a>
+                    <a href=""><img src="instagram.png" alt="" class="instagram"></a>
+                </div>
+                </div>
+            </div>
 
-        <div class="right">
-            <img src="path.png" alt="">
-        </div>
+            <div class="card1">
+                <img src="https://picsum.photos/200" alt=""  class="selfpic"/>
+                <div>
+                <h2>Vanshika Bansotra</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga. Nobis reiciendis, vitae laboriosam natus nesciunt velit dolorem animi delenitiacere accusamus sit id officiis minima officia commodi nostrum! Doloremque expedita dolorem quia explicabo accusamus.</p>
+                <div class="icons">
+                    <a href=""><img src="github.png" alt="" class="git"></a>
+                    <a href=""><img src="linkedin.png" alt="" class="linkedin"></a>
+                    <a href=""><img src="instagram.png" alt="" class="instagram"></a>
+                </div>
+                </div>
+            </div>
+
+            <div class="card1">
+                <img src="https://picsum.photos/200" alt=""  class="selfpic"/>
+                <div>
+                <h2>Pardeep Singh</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga. Nobis reiciendis, vitae laboriosam natus nesciunt velit dolorem animi delenitiacere accusamus sit id officiis minima officia commodi nostrum! Doloremque expedita dolorem quia explicabo accusamus.</p>
+                <div class="icons">
+                    <a href=""><img src="github.png" alt="" class="git"></a>
+                    <a href=""><img src="linkedin.png" alt="" class="linkedin"></a>
+                    <a href=""><img src="instagram.png" alt="" class="instagram"></a>
+                </div>
+                </div>
+            </div>
+        </div>  
     </div>
 
+
+        
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+    <div class="one padding">
+        <h2>Community</h2>
+        <p>Join our community of students and teachers to get the best learning experience.</p>
+        <p>&copy; All rights Reserved | <?php echo date("Y")?></p>
+        
+    </div>
+    <div class="two padding">
+        <a href="index.php">Home</a>
+        <a href="notes.php">Notes</a>
+        <a href="About.php">About</a>
+        <a href="contact.php">Contact</a>
+    </div>
+    <div class="three padding">
+        <div>
+            <img src="github.png" alt="" class="imglog github">
+            <img src="linkedin.png" alt="" class="imglogo">
+            <img src="facebook.png" alt=""  class="secondlogo"  >
+            <img src="instagram.png" alt=""  class="secondlogo">
+        </div>
+        
+    </div>
+</footer>
 </body>
 </html>

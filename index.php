@@ -1,3 +1,7 @@
+<?php
+    require "connect.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,12 +91,52 @@
 <!-- subjects -->
 <div class="card-container">
     <div class="Cards">
-        <h2>abc</h2>
+        <h2>Subjects</h2>
         <div class="sub-cards">
             
+            <?php
+                $sql = "SHOW TABLES";
+                $result = mysqli_query($conn, $sql);
+                if(mysqli_num_rows($result)>0){
+                    while($row = mysqli_fetch_row($result)){
+                        echo "<div class='aaaa'>
+                        <div>
+                            <h4>$row[0]</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam iure, quo quas et autem vero aliquid. Laudantium recusandae modi numquam?</p>
+                        </div>
+                    </div>";
+                    }
+                }
+            ?>
+
         </div>
     </div>
 </div>
+
+<footer class="footer">
+    <div class="one padding">
+        <h2>Community</h2>
+        <p>Join our community of students and teachers to get the best learning experience.</p>
+        <p>&copy; All rights Reserved | <?php echo date("Y")?></p>
+        
+    </div>
+    <div class="two padding">
+        <a href="index.php">Home</a>
+        <a href="notes.php">Notes</a>
+        <a href="About.php">About</a>
+        <a href="contact.php">Contact</a>
+    </div>
+    <div class="three padding">
+        <div>
+            <img src="github.png" alt="" class="imglog github">
+            <img src="linkedin.png" alt="" class="imglogo">
+            <img src="facebook.png" alt=""  class="secondlogo"  >
+            <img src="instagram.png" alt=""  class="secondlogo">
+        </div>
+        
+    </div>
+</footer>
     <script src="main.js"></script>
+    lorem
 </body>
 </html>
