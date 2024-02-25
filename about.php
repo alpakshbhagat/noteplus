@@ -11,21 +11,24 @@
     <!-- Navbar -->
     <div class="navbar">
         <h3>NotePlus</h3>
-        <div class="wrapper">
+        <div class="wrapper" onclick="toggleClass()">
             <div class="dash dash1"></div>
             <div class="dash dash2"></div>
             <div class="dash dash3"></div>
         </div>
-        <ul class="nav-menu">
+        
+        <ul class="nav-menu" id="menu">
             <li class="nav-items"><a href="index.php" class="nav-links">Home</a></li>
             <li class="nav-items"><a href="notes.php" class="nav-links">Notes</a></li>
             <li class="nav-items"><a href="About.php" class="nav-links">About</a></li>
             <li class="nav-items"><a href="contact.php" class="nav-links">Contact</a></li>
-        </ul> 
+        </ul>
+        
+         
     </div>
 
     <!-- main -->
-    <div class="container">
+    <div class="container1">
         <div class="innerdiv">
         
             <div class="top">
@@ -37,7 +40,7 @@
                 <img src="https://picsum.photos/200" alt=""  class="selfpic"/>
                 <div>
                 <h2>Alpaksh Dogra</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga. Nobis reiciendis, vitae laboriosam natus nesciunt velit dolorem animi delenitiacere accusamus sit id officiis minima officia commodi nostrum! Doloremque expedita dolorem quia explicabo accusamus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga.</p>
                 <div class="icons">
                     <a href="https://github.com/alpakshbhagat"><img src="github.png" alt="" class="git"></a>
                     <a href=""><img src="linkedin.png" alt="" class="linkedin"></a>
@@ -50,7 +53,7 @@
                 <img src="https://picsum.photos/200" alt=""  class="selfpic"/>
                 <div>
                 <h2>Vanshika Bansotra</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga. Nobis reiciendis, vitae laboriosam natus nesciunt velit dolorem animi delenitiacere accusamus sit id officiis minima officia commodi nostrum! Doloremque expedita dolorem quia explicabo accusamus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga.</p>
                 <div class="icons">
                     <a href=""><img src="github.png" alt="" class="git"></a>
                     <a href=""><img src="linkedin.png" alt="" class="linkedin"></a>
@@ -63,11 +66,11 @@
                 <img src="https://picsum.photos/200" alt=""  class="selfpic"/>
                 <div>
                 <h2>Pardeep Singh</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga. Nobis reiciendis, vitae laboriosam natus nesciunt velit dolorem animi delenitiacere accusamus sit id officiis minima officia commodi nostrum! Doloremque expedita dolorem quia explicabo accusamus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga.</p>
                 <div class="icons">
-                    <a href=""><img src="github.png" alt="" class="git"></a>
-                    <a href=""><img src="linkedin.png" alt="" class="linkedin"></a>
-                    <a href=""><img src="instagram.png" alt="" class="instagram"></a>
+                    <a href="" target="_blank"><img src="github.png" alt="" class="git"></a>
+                    <a href="" target="_blank"><img src="linkedin.png" alt="" class="linkedin"></a>
+                    <a href="" target="_blank"><img src="instagram.png" alt="" class="instagram"></a>
                 </div>
                 </div>
             </div>
@@ -102,5 +105,6 @@
         
     </div>
 </footer>
+<script src="main.js"></script>
 </body>
 </html>

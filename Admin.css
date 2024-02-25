@@ -7,17 +7,21 @@
 input{
     color: #fff;
     display: block;
-    width: 20vw;
+    width: 100%;
     margin: 2vh 0;
     border-width: 0 0 2px 0;
     border-color: #fff;
     padding: 10px 0 3px 7px;
     background-color:#4A5156;
 }
+.input img{
+    width: 38vmax;
+    height: 32vmax;
+}
 textarea{
     margin-top: 10px;
     height:  8vh;
-    width: 20.4vw;
+    width:100%;
     resize: none;
     
 }
@@ -41,13 +45,16 @@ textarea::placeholder{
     background-color: rgb(14, 145, 246);
 }
 .input{
+    width: 100%;
     align-items: center;
     display: flex;
-    
+    justify-content: space-around;
 }
+
 .inputs{
     /* border: 2px solid red; */
-    padding: 10vh 5vw;
+    /* padding: 10vh 5vw; */
+    width: 35vmax;
     border-radius: 10px;
     background-color: #4A5156;
 }
@@ -89,17 +96,14 @@ th, td {
 }
 @media (max-width:1400px) {
     .input img{
-        /* width: 40vmax; */
-        height: 45vmax;
+        width: 50vmax;
+        height: 40vmax;
     }
-    .fa-solid{
-        color: #fff; 
-        position: relative; 
-        top: 48px; 
-        left: 260px;
+    .inputs input{
+        width: 100%;
     }
     .inputs{
-        width: 20vw;
+        /* width: ; */
         padding: 5vmin;
     }
 }

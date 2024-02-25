@@ -10,9 +10,6 @@ require "connect.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Admin.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <title>Admin Login</title>
 </head>
 <body>
@@ -39,10 +36,10 @@ require "connect.php";
             <img src="Login-page-character1.png" alt="Admin png">
             <div class="inputs">
                 <form action="" method="POST" enctype="multipart/form-data">
-                    <i class="fa-solid fa-book"  ></i>
+                    
                     <input type="text" placeholder="Subject" id="Subject" name="subject" required>
                     
-                    <i class="fa-solid fa-chart-bar" ></i>
+                    
                     <input type="text" placeholder="Unit" name="unit" required>
                     
                     <input type="file" placeholder="file" class="file" accept="application/pdf,application/msword,
@@ -102,7 +99,7 @@ require "connect.php";
         $fileData = file_get_contents($_FILES["file"]["tmp_name"]);
         $fileData = mysqli_real_escape_string($conn, $fileData);
     
-        $sql = "INSERT INTO $subject (subject, unit, file) VALUES ('$subject', '$unit', '$fileData')";
+        $sql = "INSERT INTO $subject (subject, unit,, file) VALUES ('$subject', '$unit', '$fileData')";
     
         if (mysqli_query($conn, $sql)) {
             echo "File uploaded successfully.";
@@ -121,7 +118,7 @@ require "connect.php";
         ) ENGINE=InnoDB";
 
          // Execute query
-    if ($conn->query($sql) === TRUE) {
+    if (mysqli_query($conn, $sql) === TRUE) {
         insertData($conn, $subject, $unit);
     } else {
         echo "Error creating table: " . $conn->error;
