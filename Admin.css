@@ -69,6 +69,27 @@ th, td {
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
+#topForm{
+    border: 1px solid #fff;
+    border-radius: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+#bottomForm{
+    padding: 3%;
+    margin-top: 5%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.dropdown{
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    padding: 5px;
+}
+.dropdown option{
+    color: black;
+}
 @media screen and (max-width: 600px) {
     tr th{
         font-size: 12px;
@@ -115,6 +136,9 @@ th, td {
     }
     .inputs input{
         width: 100%;
+    }
+    #subject{
+        width: 50%;
     }
     .inputs{
         /* width: ; */

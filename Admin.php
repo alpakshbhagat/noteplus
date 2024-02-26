@@ -36,22 +36,14 @@ require "connect.php";
             <img src="Login-page-character1.png" alt="Admin png">
             <div class="inputs">
                 <h2 style="color: #fff; text-align:center">Upload PDFs Only!</h2><br>
-                <form action="" method="post">
-                    <input type="text" placeholder="Add Subject to dropdown menu" id="Subject" name="tableCreation" required> 
-                    <input type="submit" value="Add Subject" id="button">
-
-
-
-                <!-- //warning due to unsetted values -->
-
-
-
-
+                <form action="" method="post" id="topForm">
+                    <input type="text" placeholder="Add to dropdown" id="Subject" style="width: 50%;" name="tableCreation" required> 
+                    <input type="submit" value="Add" id="button" style="width: 20%;">
 
                     <?php
+                        if(isset($_POST['tableCreation'])){
                         $tableCreation = $_REQUEST['tableCreation'];
                         function tableCreation($conn, $tableCreation){
-                            if(isset($_POST['tableCreation'])){
                                         $sql =  "CREATE TABLE IF NOT EXISTS `$tableCreation` (
                                         sno INT(100) NOT NULL AUTO_INCREMENT,
                                         subject VARCHAR(50) NOT NULL,
@@ -67,17 +59,18 @@ require "connect.php";
                                     echo "Error creating table: " . $conn->error;
                                 }
                             }
+                            tableCreation( $conn , $tableCreation);
                         }
-                        tableCreation( $conn , $tableCreation);
                     ?>
                 </form>         
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="" method="POST" enctype="multipart/form-data" id="bottomForm">
+                    <h3 style="color: #fff; padding-bottom: 2%; text-decoration:underline">Upload your files here.</h3>
                     <?php
                         $sql = "SHOW TABLES";
                         $result = mysqli_query($conn,$sql);
 
                             //dropdown
-                            echo '<select  name="subject"  required>';
+                            echo '<select class="dropdown" name="subject"  required>';
                             while ($row = mysqli_fetch_array($result)) {
                                 echo '<option value="' . $row[0] . '">' . $row[0] . '</option>';
                             }
@@ -129,7 +122,8 @@ require "connect.php";
    
 
 
-    if($_POST['unit'] &&  $_POST['subject'] && $_POST['file']) {
+    if(isset($_POST['unit'])) {
+        // echo "aaaaaaaaaaaaaaaaaa";
     $subject = $_REQUEST['subject'];
     $unit = $_REQUEST['unit'];
 
@@ -157,7 +151,7 @@ require "connect.php";
     }
     
     
-
+   
 
     // checking for table exists or not
 
