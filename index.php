@@ -97,16 +97,25 @@
             <?php
                 $sql = "SHOW TABLES";
                 $result = mysqli_query($conn, $sql);
+
+                $tables = [];
                 if(mysqli_num_rows($result)>0){
                     while($row = mysqli_fetch_row($result)){
-                        echo "<div class='aaaa'>
-                        <div>
-                            <h4>$row[0]</h4>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam iure, quo quas et autem vero aliquid. Laudantium recusandae modi numquam?</p>
-                        </div>
-                    </div>";
+                        $tables[$row[0]]=$row[0];
+                        $tableName = $row[0];
+                            if ($tableName !== 'feedback') {
+                                echo "<div class='aaaa'>
+                                <div>
+                                    <a href='pdf.php?id=".$tables[$row[0]]."'><h4>$row[0]</h4>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam iure, quo quas et autem vero aliquid. Laudantium recusandae modi numquam?</p>
+                                    </a>
+                                </div>
+                            </div>";
+                            }
+                       
                     }
                 }
+                
             ?>
 
         </div>
@@ -137,6 +146,5 @@
     </div>
 </footer>
     <script src="main.js"></script>
-    lorem
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-    require "connect.php";
+require "connect.php";
 ?>
 
 <!DOCTYPE html>
@@ -7,12 +7,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="notes.css">
-    <title>Notes</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="pdf.css">
 </head>
 <body>
-<!-- Navbar -->
+    <!-- Navbar -->
     <div class="navbar">
         <h3>NotePlus</h3>
         <div class="wrapper">
@@ -26,43 +27,41 @@
             <li class="nav-items"><a href="About.php" class="nav-links">About</a></li>
             <li class="nav-items"><a href="contact.php" class="nav-links">Contact</a></li>
         </ul> 
-    </div> 
+    </div>
 
-<!-- subjects -->
-<div class="card-container">
-    <div class="Cards">
-        <h2>Subjects</h2>
-        <div class="sub-cards">
-            
+    <div class="pdfContainer">
+        <div class="sidebar">
             <?php
-                $sql = "SHOW TABLES";
+                $id = $_GET['id'];
+                
+
+                $sql = "SELECT * FROM `$id`";
                 $result = mysqli_query($conn, $sql);
 
-                $tables = [];
-                if(mysqli_num_rows($result)>0){
-                    while($row = mysqli_fetch_row($result)){
-                        $tables[$row[0]]=$row[0];
-                        $tableName = $row[0];
-                            if ($tableName !== 'feedback') {
-                                echo "<div class='aaaa'>
-                                <div>
-                                    <a href='pdf.php?id=".$tables[$row[0]]."'><h4>$row[0]</h4>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam iure, quo quas et autem vero aliquid. Laudantium recusandae modi numquam?</p>
-                                    </a>
-                                </div>
-                            </div>";
-                            }
-                       
-                    }
-                }
-                
-            ?>
+                if (mysqli_num_rows($result) > 0) {
+                    
+                    ?>
+                    <ul class="sideList">
+                    <?php
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<li><a href='description.php?unit=" . $row['unit'] . "&subject=".$id."#toolbar=0' target='iframe'>" . $row['unit'] . "</a></li>";
 
+
+                        }
+                    }
+                    ?>
+                    </ul>
+                    
+        </div>
+        <div class="iframe">
+            <iframe src="index.php" frameborder="0" name="iframe"></iframe>
         </div>
     </div>
-</div>
-    <!-- footer -->
-    <footer class="footer">
+
+
+
+        <!-- footer -->
+        <footer class="footer">
     <div class="one padding">
         <h2>Community</h2>
         <p>Join our community of students and teachers to get the best learning experience.</p>
@@ -85,5 +84,6 @@
         
     </div>
 </footer>
+    <script src="main.js"></script>
 </body>
 </html>

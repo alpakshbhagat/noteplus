@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container1{
+    background-color: var(--bgshade);
+    box-shadow: 0px .5px 25px var(--bodycol) inset;
+}
 .top{
     width: 100%;
     display: flex; 
@@ -15,9 +19,7 @@
     padding: 5vmin 0;
 
 }
-.aboutCard{
-    /* border: 2px solid red; */
-}
+
 .card1{
     width: 30vmax;
 }
@@ -31,6 +33,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #5eb0da;
+    margin-bottom: 3vmin;
 }
 .aboutCard{
     display: flex;
@@ -38,7 +41,7 @@
 }
 .card1 h2{
     text-align: center;
-    font-size: 3vmin;
+    font-size: 4vmin;
 }
 .selfpic{
     height: 30vmin;
@@ -67,4 +70,32 @@
     justify-content: center;
     gap: 4vmin;
     height: 8vmin;
+}
+@media (max-width: 600px) {
+    .card1{
+        width: 85vw;
+        height: 45vh;
+    }
+    .card1 h2{
+        font-size: 3vmax;
+    }
+    .aboutCard{
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .git{
+        /* padding-top: 1vmin; */
+        height: 6vmax;
+    }
+    .linkedin{
+        height: 6vmax;
+        /* padding-top: 1vmin; */
+    }
+    .instagram{
+        margin-top: 1vmin;
+        height: 5vmax;
+        border-radius: 50%;
+    }
+    
 }

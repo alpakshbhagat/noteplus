@@ -1,0 +1,83 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            @media screen and (max-width: 600px) {
+                table, thead, tbody, th, td, tr {
+                    display: block;
+                }
+                thead tr {
+                    position: absolute;
+                    top: -9999px;
+                    left: -9999px;
+                }
+                tr {
+                    border: 1px solid #ccc;
+                }
+                td {
+                    border: none;
+                    border-bottom: 1px solid #eee;
+                    position: relative;
+                    padding-left: 50%;
+                    white-space: normal;
+                    text-align: left;
+                }
+                td:before {
+                    position: absolute;
+                    top: 6px;
+                    left: 6px;
+                    width: 45%;
+                    padding-right: 10px;
+                    white-space: nowrap;
+                    content: attr(data-column);
+                    font-weight: bold;
+                }
+            }
+        </style>
+    </head>
+    <body>
+    
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">S.No.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Semester</th>
+            <th scope="col">Roll No.</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Issue</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td data-column="S.No.">1</td>
+            <td data-column="Name">John Doe</td>
+            <td data-column="Semester">3</td>
+            <td data-column="Roll No.">12345</td>
+            <td data-column="Contact">john.doe@example.com</td>
+            <td data-column="Issue">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec quam vitae nunc auctor eleifend. Cras congue, nisl at iaculis pulvinar, nisi dui lacinia mi, id ultrices elit odio nec lectus.</td>
+        </tr>
+        <tr>
+            <td data-column="S.No.">2</td>
+            <td data-column="Name">Jane Smith</td>
+            <td data-column="Semester">4</td>
+            <td data-column="Roll No.">54321</td>
+            <td data-column="Contact">jane.smith@example.com</td>
+            <td data-column="Issue">Sed dictum, arcu sit amet scelerisque consequat, erat dui pulvinar nisl, vel lacinia leo enim in erat.</td>
+        </tr>
+        </tbody>
+    </table>
+    
+    </body>
+    </html>
+   

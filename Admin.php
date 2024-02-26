@@ -10,9 +10,6 @@ require "connect.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Admin.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <title>Admin Login</title>
 </head>
 <body>
@@ -38,15 +35,26 @@ require "connect.php";
         <div class="input">
             <img src="Login-page-character1.png" alt="Admin png">
             <div class="inputs">
+                <h2 style="color: #fff; text-align:center">Upload PDFs Only!</h2><br>         
                 <form action="" method="POST" enctype="multipart/form-data">
-                    <i class="fa-solid fa-book" style="color: #fff; position: relative; top: 50px; left: 370px" ></i>
-                    <input type="text" placeholder="Subject" id="Subject" name="subject" required>
+                    <?php
+                        $sql = "SHOW TABLES";
+                        $result = mysqli_query($conn,$sql);
+
+                            //dropdown
+                            echo '<select>';
+                            while ($row = mysqli_fetch_array($result)) {
+                                echo '<option value="' . $row[0] . '" name="subject">' . $row[0] . '</option>';
+                            }
+                            echo '</select>';
+                    ?>
                     
-                    <i class="fa-solid fa-chart-bar" style="color: #fff; position: relative; top: 50px; left: 370px"></i>
+                    <input type="text" placeholder="Subject" id="Subject" name="subject">
+                    
+                    
                     <input type="text" placeholder="Unit" name="unit" required>
                     
-                    <input type="file" placeholder="file" class="file" accept="application/pdf,application/msword,
-                    application/vnd.openxmlformats-officedocument.wordprocessingml.document" title="Upload PDF" style="margin-top: 2vh;" name="file" >
+                    <input type="file" placeholder="file" class="file" accept="application/pdf" title="Upload PDF" style="margin-top: 2vh;" name="file" >
         
                     <input type="submit" value="Submit" id="button">
 
@@ -88,6 +96,7 @@ require "connect.php";
 
     if($_SERVER['REQUEST_METHOD']=="POST"){
     $subject = $_REQUEST['subject'];
+    // $subject = str_replace(" ", "_", $table_name);
     $unit = $_REQUEST['unit'];
     // Table Exist function
     function tableExists($conn, $subject) {
@@ -102,17 +111,19 @@ require "connect.php";
         $fileData = file_get_contents($_FILES["file"]["tmp_name"]);
         $fileData = mysqli_real_escape_string($conn, $fileData);
     
-        $sql = "INSERT INTO $subject (subject, unit, file) VALUES ('$subject', '$unit', '$fileData')";
+        $sql = "INSERT INTO `$subject` (subject, unit, file) VALUES ('$subject', '$unit', '$fileData')";
     
         if (mysqli_query($conn, $sql)) {
-            echo "File uploaded successfully.";
+            echo '<script>alert("Your notes uploaded to Noteplus Successfully.\n Thank you!")</script>';
+            
         } else {
             echo "Error uploading file: " . mysqli_error($conn);
         }
     }
     
     function tableCreation($subject, $conn, $unit){
-        $sql = "CREATE TABLE IF NOT EXISTS $subject (
+        
+        $sql =  "CREATE TABLE IF NOT EXISTS `$subject` (
             sno INT(100) NOT NULL AUTO_INCREMENT,
             subject VARCHAR(50) NOT NULL,
             unit VARCHAR(50) NOT NULL,
@@ -121,7 +132,7 @@ require "connect.php";
         ) ENGINE=InnoDB";
 
          // Execute query
-    if ($conn->query($sql) === TRUE) {
+    if (mysqli_query($conn, $sql) === TRUE) {
         insertData($conn, $subject, $unit);
     } else {
         echo "Error creating table: " . $conn->error;

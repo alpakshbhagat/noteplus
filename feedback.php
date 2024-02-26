@@ -33,7 +33,10 @@ require "connect.php";
 
     <div class="container">
       <div class="input">
-        <img src="Login-page-character1.png" alt="Admin png">
+        <div>
+
+        <img src="feedback.png" alt="Admin png">
+        </div>
         <div class="inputs">
           <table class="table table-bordered">
               <thead>

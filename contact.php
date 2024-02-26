@@ -10,7 +10,7 @@ require "connect.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Admin.css">
-    <title>Admin Login</title>
+    <title>Contact Us</title>
 </head>
 <body>
     <!-- navbar -->
@@ -35,7 +35,6 @@ require "connect.php";
             <img src="Login-page-character1.png" alt="Admin png">
             <div class="inputs">
                 <form action="" method="POST" enctype="multipart/form-data">
-                    
                     <input type="text" placeholder="Name" name="name" required>
                     <input type="text" placeholder="Semester" name="semester" required>
                     <input type="number" placeholder="Roll No." name="rollno" required>
@@ -75,18 +74,62 @@ require "connect.php";
 
 
     if($_SERVER['REQUEST_METHOD']=="POST"){
-    $name = $_REQUEST['name'];
-    $semester = $_REQUEST['semester'];
-    $rollno = $_REQUEST['rollno'];
-    $number = $_REQUEST['number'];
-    $problem = $_REQUEST['problem'];
+        // checking for table exists or not
+        function tableExists($conn) {
+            $result = mysqli_query($conn, "SHOW TABLES LIKE 'feedback'");
+            return $result && mysqli_num_rows($result) > 0;
+        }
 
-    $sql= "INSERT INTO feedback (name,semester, rollno, number, problem) VALUES ('$name', '$semester', '$rollno','$number', '$problem')";
-    if (mysqli_query($conn, $sql)) {
-        echo "File uploaded successfully.";
+
+        // data inserting function
+    function insert($conn){
+
+        $name = $_REQUEST['name'];
+        $semester = $_REQUEST['semester'];
+        $rollno = $_REQUEST['rollno'];
+        $number = $_REQUEST['number'];
+        $problem = $_REQUEST['problem'];
+    
+        
+        $sql= "INSERT INTO feedback (name,semester, rollno, number, problem) VALUES ('$name', '$semester', '$rollno','$number', '$problem')";
+        if (mysqli_query($conn, $sql)) {
+            echo "<script>alert('Sorry for inconvenience!\\nWe will solve your problem shortly')</script>";
+        }
+        else{
+            echo "file not uploaded";
+        }
+    }
+        // table creation function
+    function tableCreation($conn){
+        $sql = "CREATE TABLE IF NOT EXISTS feedback (
+            sno INT(100) NOT NULL AUTO_INCREMENT,
+            name VARCHAR(50) NOT NULL,
+            semester VARCHAR(50) NOT NULL,
+            rollno INT(100) NOT NULL,
+            number BIGINT(10) NOT NULL,
+            problem VARCHAR(200) NOT NULL,
+            PRIMARY KEY (sno)
+        ) ENGINE=InnoDB";
+        
+
+         // Execute query
+    if (mysqli_query($conn, $sql) === TRUE) {
+        insert($conn);
+    } else {
+        echo "Error creating table: " . $conn->error;
     }
     
     }
+
+    // checking for table exists or not
+
+    if (tableExists($conn)) {
+        insert($conn);
+    } 
+    else {
+        tableCreation($conn);
+    }
+}
 ?>
 </body>
 </html>

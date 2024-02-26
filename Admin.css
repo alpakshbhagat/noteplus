@@ -7,17 +7,21 @@
 input{
     color: #fff;
     display: block;
-    width: 20vw;
+    width: 25vmax;
     margin: 2vh 0;
     border-width: 0 0 2px 0;
     border-color: #fff;
     padding: 10px 0 3px 7px;
     background-color:#4A5156;
 }
+.input img{
+    width: 38vmax;
+    height: 32vmax;
+}
 textarea{
     margin-top: 10px;
     height:  8vh;
-    width: 20.4vw;
+    width:100%;
     resize: none;
     
 }
@@ -41,23 +45,38 @@ textarea::placeholder{
     background-color: rgb(14, 145, 246);
 }
 .input{
+    width: 100%;
     align-items: center;
     display: flex;
-    
+    justify-content: space-around;
 }
+
 .inputs{
     /* border: 2px solid red; */
-    padding: 10vh 5vw;
+    padding: 2vmax 3vmax;
+    display: block;
+    /* width: 35vmax; */
     border-radius: 10px;
     background-color: #4A5156;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 th, td {
-    border-bottom: 1px solid #ddd;
-    color: #fff;
-    padding: 5px;
+    padding: 8px;
     text-align: left;
-  }
+    border-bottom: 1px solid #ddd;
+}
+@media screen and (max-width: 600px) {
+    tr th{
+        font-size: 12px;
+    }
+    tr td{
+        font-size: 11px;
+    }
+}
 @media (max-width:600px) {
     .container{
         height: 100%;
@@ -78,6 +97,34 @@ th, td {
     }
     .inputs{
         padding: 10vh 2vh;
+        margin: 0 5vmin 5vmin;
     }
 
+}
+@media (max-width:1400px) {
+    tr th{
+        font-size: 12px;
+    }
+    tr td{
+        font-size: 11px;
+    }
+
+    .input img{
+        width: 50vmax;
+        height: 40vmax;
+    }
+    .inputs input{
+        width: 100%;
+    }
+    .inputs{
+        /* width: ; */
+        padding: 5vmin;
+    }
+    .inputs{
+        /* border: 2px solid red; */
+        /* padding: 10vh 5vw; */
+        /* width: 35vmax; */
+        border-radius: 10px;
+        background-color: #4A5156;
+    }
 }
