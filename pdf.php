@@ -35,11 +35,7 @@ require "connect.php";
                 $id = $_GET['id'];
                 
 
-<<<<<<< HEAD
                 $sql = "SELECT * FROM `$id`";
-=======
-                $sql = "SELECT * FROM $id";
->>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
                 $result = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {

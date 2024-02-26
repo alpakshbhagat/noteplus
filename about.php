@@ -42,9 +42,9 @@
                 <h2>Alpaksh Dogra</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga.</p>
                 <div class="icons">
-                    <a href="https://github.com/alpakshbhagat"><img src="github.png" alt="" class="git"></a>
-                    <a href=""><img src="linkedin.png" alt="" class="linkedin"></a>
-                    <a href=""><img src="instagram.png" alt="" class="instagram"></a>
+                    <a href="https://github.com/alpakshbhagat" target="_blank"><img src="github.png" alt="" class="git"></a>
+                    <a href="" target="_blank"><img src="linkedin.png" alt="" class="linkedin"></a>
+                    <a href="" target="_blank"><img src="instagram.png" alt="" class="instagram"></a>
                 </div>
                 </div>
             </div>
@@ -55,9 +55,9 @@
                 <h2>Vanshika Bansotra</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga.</p>
                 <div class="icons">
-                    <a href=""><img src="github.png" alt="" class="git"></a>
-                    <a href=""><img src="linkedin.png" alt="" class="linkedin"></a>
-                    <a href=""><img src="instagram.png" alt="" class="instagram"></a>
+                    <a href=""  target="_blank"><img src="github.png" alt="" class="git"></a>
+                    <a href=""  target="_blank"><img src="linkedin.png" alt="" class="linkedin"></a>
+                    <a href=""  target="_blank"><img src="instagram.png" alt="" class="instagram"></a>
                 </div>
                 </div>
             </div>
@@ -70,11 +70,7 @@
                 <div class="icons">
                     <a href="" target="_blank"><img src="github.png" alt="" class="git"></a>
                     <a href="" target="_blank"><img src="linkedin.png" alt="" class="linkedin"></a>
-<<<<<<< HEAD
                     <a href="https://www.instagram.com/pardeepsingh___3223" target="_blank"><img src="instagram.png" alt="" class="instagram"></a>
-=======
-                    <a href="" target="_blank"><img src="instagram.png" alt="" class="instagram"></a>
->>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
                 </div>
                 </div>
             </div>

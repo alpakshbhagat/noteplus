@@ -35,33 +35,61 @@ require "connect.php";
         <div class="input">
             <img src="Login-page-character1.png" alt="Admin png">
             <div class="inputs">
-                <h2 style="color: #fff; text-align:center">Upload PDFs Only!</h2><br>         
+                <h2 style="color: #fff; text-align:center">Upload PDFs Only!</h2><br>
+                <form action="" method="post">
+                    <input type="text" placeholder="Add Subject to dropdown menu" id="Subject" name="tableCreation" required> 
+                    <input type="submit" value="Add Subject" id="button">
+
+
+
+                <!-- //warning due to unsetted values -->
+
+
+
+
+
+                    <?php
+                        $tableCreation = $_REQUEST['tableCreation'];
+                        function tableCreation($conn, $tableCreation){
+                            if(isset($_POST['tableCreation'])){
+                                        $sql =  "CREATE TABLE IF NOT EXISTS `$tableCreation` (
+                                        sno INT(100) NOT NULL AUTO_INCREMENT,
+                                        subject VARCHAR(50) NOT NULL,
+                                        unit VARCHAR(50) NOT NULL,
+                                        file LONGBLOB NOT NULL,
+                                        PRIMARY KEY (sno)
+                                    ) ENGINE=InnoDB";
+                            
+                                    // Execute query
+                                if (mysqli_query($conn, $sql) === TRUE) {
+                                    echo "<script>alert('Option Created for ".$tableCreation."')</script> ";
+                                } else {
+                                    echo "Error creating table: " . $conn->error;
+                                }
+                            }
+                        }
+                        tableCreation( $conn , $tableCreation);
+                    ?>
+                </form>         
                 <form action="" method="POST" enctype="multipart/form-data">
-<<<<<<< HEAD
                     <?php
                         $sql = "SHOW TABLES";
                         $result = mysqli_query($conn,$sql);
 
                             //dropdown
-                            echo '<select>';
+                            echo '<select  name="subject"  required>';
                             while ($row = mysqli_fetch_array($result)) {
-                                echo '<option value="' . $row[0] . '" name="subject">' . $row[0] . '</option>';
+                                echo '<option value="' . $row[0] . '">' . $row[0] . '</option>';
                             }
                             echo '</select>';
                     ?>
                     
-                    <input type="text" placeholder="Subject" id="Subject" name="subject">
                     
                     
-=======
                     
-                    <input type="text" placeholder="Subject" id="Subject" name="subject" required>
-                    
-                    
->>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
                     <input type="text" placeholder="Unit" name="unit" required>
                     
-                    <input type="file" placeholder="file" class="file" accept="application/pdf" title="Upload PDF" style="margin-top: 2vh;" name="file" >
+                    <input type="file" placeholder="file" class="file" accept="application/pdf" title="Upload PDF" style="margin-top: 2vh;" name="file" required>
         
                     <input type="submit" value="Submit" id="button">
 
@@ -101,10 +129,10 @@ require "connect.php";
    
 
 
-    if($_SERVER['REQUEST_METHOD']=="POST"){
+    if($_POST['unit'] &&  $_POST['subject'] && $_POST['file']) {
     $subject = $_REQUEST['subject'];
-    // $subject = str_replace(" ", "_", $table_name);
     $unit = $_REQUEST['unit'];
+
     // Table Exist function
     function tableExists($conn, $subject) {
         $result = mysqli_query($conn, "SHOW TABLES LIKE '$subject'");
@@ -118,11 +146,7 @@ require "connect.php";
         $fileData = file_get_contents($_FILES["file"]["tmp_name"]);
         $fileData = mysqli_real_escape_string($conn, $fileData);
     
-<<<<<<< HEAD
         $sql = "INSERT INTO `$subject` (subject, unit, file) VALUES ('$subject', '$unit', '$fileData')";
-=======
-        $sql = "INSERT INTO $subject (subject, unit,, file) VALUES ('$subject', '$unit', '$fileData')";
->>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
     
         if (mysqli_query($conn, $sql)) {
             echo '<script>alert("Your notes uploaded to Noteplus Successfully.\n Thank you!")</script>';
@@ -132,24 +156,7 @@ require "connect.php";
         }
     }
     
-    function tableCreation($subject, $conn, $unit){
-        
-        $sql =  "CREATE TABLE IF NOT EXISTS `$subject` (
-            sno INT(100) NOT NULL AUTO_INCREMENT,
-            subject VARCHAR(50) NOT NULL,
-            unit VARCHAR(50) NOT NULL,
-            file LONGBLOB NOT NULL,
-            PRIMARY KEY (sno)
-        ) ENGINE=InnoDB";
-
-         // Execute query
-    if (mysqli_query($conn, $sql) === TRUE) {
-        insertData($conn, $subject, $unit);
-    } else {
-        echo "Error creating table: " . $conn->error;
-    }
-        
-    }
+    
 
 
     // checking for table exists or not
@@ -157,7 +164,7 @@ require "connect.php";
     if (tableExists($conn, $subject)) {
         insertData($conn, $subject, $unit);
     } else {
-        tableCreation($subject ,$conn, $unit);
+        echo "<script>alert('Please add a subject')</script>";
     }
     
    // Close connection

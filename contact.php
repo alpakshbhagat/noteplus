@@ -34,6 +34,7 @@ require "connect.php";
         <div class="input">
             <img src="Login-page-character1.png" alt="Admin png">
             <div class="inputs">
+                <h2 style="color:#fff;">Get in touch with us:</h2>
                 <form action="" method="POST" enctype="multipart/form-data">
                     <input type="text" placeholder="Name" name="name" required>
                     <input type="text" placeholder="Semester" name="semester" required>
