@@ -7,7 +7,11 @@
 input{
     color: #fff;
     display: block;
+<<<<<<< HEAD
     width: 25vmax;
+=======
+    width: 100%;
+>>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
     margin: 2vh 0;
     border-width: 0 0 2px 0;
     border-color: #fff;
@@ -53,9 +57,14 @@ textarea::placeholder{
 
 .inputs{
     /* border: 2px solid red; */
+<<<<<<< HEAD
     padding: 2vmax 3vmax;
     display: block;
     /* width: 35vmax; */
+=======
+    /* padding: 10vh 5vw; */
+    width: 35vmax;
+>>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
     border-radius: 10px;
     background-color: #4A5156;
 }
@@ -67,6 +76,7 @@ table {
 th, td {
     padding: 8px;
     text-align: left;
+<<<<<<< HEAD
     border-bottom: 1px solid #ddd;
 }
 @media screen and (max-width: 600px) {
@@ -77,6 +87,15 @@ th, td {
         font-size: 11px;
     }
 }
+=======
+  }
+  .fa-solid{
+    color: #fff;
+    position: relative; 
+    top: 50px; 
+    left: 370px
+  }
+>>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
 @media (max-width:600px) {
     .container{
         height: 100%;
@@ -102,6 +121,7 @@ th, td {
 
 }
 @media (max-width:1400px) {
+<<<<<<< HEAD
     tr th{
         font-size: 12px;
     }
@@ -109,6 +129,8 @@ th, td {
         font-size: 11px;
     }
 
+=======
+>>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
     .input img{
         width: 50vmax;
         height: 40vmax;
@@ -120,6 +142,7 @@ th, td {
         /* width: ; */
         padding: 5vmin;
     }
+<<<<<<< HEAD
     .inputs{
         /* border: 2px solid red; */
         /* padding: 10vh 5vw; */
@@ -127,4 +150,6 @@ th, td {
         border-radius: 10px;
         background-color: #4A5156;
     }
+=======
+>>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
 }

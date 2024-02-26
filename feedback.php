@@ -35,7 +35,11 @@ require "connect.php";
       <div class="input">
         <div>
 
+<<<<<<< HEAD
         <img src="feedback.png" alt="Admin png">
+=======
+          <img src="feedback.png" alt="Admin png">
+>>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
         </div>
         <div class="inputs">
           <table class="table table-bordered">

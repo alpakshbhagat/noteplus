@@ -70,7 +70,11 @@
                 <div class="icons">
                     <a href="" target="_blank"><img src="github.png" alt="" class="git"></a>
                     <a href="" target="_blank"><img src="linkedin.png" alt="" class="linkedin"></a>
+<<<<<<< HEAD
                     <a href="https://www.instagram.com/pardeepsingh___3223" target="_blank"><img src="instagram.png" alt="" class="instagram"></a>
+=======
+                    <a href="" target="_blank"><img src="instagram.png" alt="" class="instagram"></a>
+>>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
                 </div>
                 </div>
             </div>

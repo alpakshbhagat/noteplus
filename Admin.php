@@ -37,6 +37,7 @@ require "connect.php";
             <div class="inputs">
                 <h2 style="color: #fff; text-align:center">Upload PDFs Only!</h2><br>         
                 <form action="" method="POST" enctype="multipart/form-data">
+<<<<<<< HEAD
                     <?php
                         $sql = "SHOW TABLES";
                         $result = mysqli_query($conn,$sql);
@@ -52,6 +53,12 @@ require "connect.php";
                     <input type="text" placeholder="Subject" id="Subject" name="subject">
                     
                     
+=======
+                    
+                    <input type="text" placeholder="Subject" id="Subject" name="subject" required>
+                    
+                    
+>>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
                     <input type="text" placeholder="Unit" name="unit" required>
                     
                     <input type="file" placeholder="file" class="file" accept="application/pdf" title="Upload PDF" style="margin-top: 2vh;" name="file" >
@@ -111,7 +118,11 @@ require "connect.php";
         $fileData = file_get_contents($_FILES["file"]["tmp_name"]);
         $fileData = mysqli_real_escape_string($conn, $fileData);
     
+<<<<<<< HEAD
         $sql = "INSERT INTO `$subject` (subject, unit, file) VALUES ('$subject', '$unit', '$fileData')";
+=======
+        $sql = "INSERT INTO $subject (subject, unit,, file) VALUES ('$subject', '$unit', '$fileData')";
+>>>>>>> 6bcd897230f966950ede8e31d104f497ab105bd5
     
         if (mysqli_query($conn, $sql)) {
             echo '<script>alert("Your notes uploaded to Noteplus Successfully.\n Thank you!")</script>';
