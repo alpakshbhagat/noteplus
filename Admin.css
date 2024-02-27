@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+input{
+    color: #fff;
+    display: block;
+    width: 100%;
+    margin: 2vh 0;
+    border-width: 0 0 2px 0;
+    border-color: #fff;
+    padding: 10px 0 3px 2px;
+    background-color:#4A5156;
+}
+.input img{
+    width: 38vmax;
+    height: 32vmax;
+}
+textarea{
+    margin-top: 10px;
+    height:  8vh;
+    width:100%;
+    resize: none;
+    
+}
+::placeholder{
+    color: #fff;
+    font-size: 15px;
+}
+textarea::placeholder{
+    color: #4A5156;
+    font-size: 15px;
+}
+#button{
+    border-width: 0;
+    border-radius: 8px;
+    color: #fff;
+    background-color: rgb(98, 184, 249);
+    padding: 10px 0;
+    margin-top: 25px;
+}
+#button:hover{
+    background-color: rgb(14, 145, 246);
+}
+.input{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.inputs{
+    /* border: 2px solid red; */
+    padding: 2vmax 3vmax;
+    display: block;
+    width: 30%;
+    border-radius: 10px;
+    background-color: #4A5156;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+#topForm{
+    border: 1px solid #fff;
+    border-radius: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+#bottomForm{
+    padding: 3%;
+    margin-top: 5%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.dropdown{
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    padding: 5px;
+}
+.dropdown option{
+    color: black;
+}
+@media screen and (max-width: 600px) {
+    tr th{
+        font-size: 12px;
+    }
+    tr td{
+        font-size: 11px;
+    }
+}
+@media (max-width:600px) {
+    .container{
+        height: 100%;
+        width: 100%;
+        
+    }
+    img{
+        width: 100vw;
+    }
+    .input{
+        /* margin-left: 15px; */
+        /* padding:; */
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    input{
+        width: 90vw;
+    }
+    .inputs{
+        padding: 10vh 2vh;
+        margin: 0 5vmin 5vmin;
+        width: 90%;
+    }
+
+}
+@media (max-width:1400px) {
+    tr th{
+        font-size: 12px;
+    }
+    tr td{
+        font-size: 11px;
+    }
+
+    .input img{
+        width: 50vmax;
+        height: 40vmax;
+    }
+    .inputs input{
+        width: 100%;
+    }
+    #subject{
+        width: 50%;
+    }
+    .inputs{
+        /* width: ; */
+        padding: 5vmin;
+    }
+    .inputs{
+        /* border: 2px solid red; */
+        /* padding: 10vh 5vw; */
+        /* width: 35vmax; */
+        border-radius: 10px;
+        background-color: #4A5156;
+    }
+}

@@ -1,0 +1,23 @@
+.pdfContainer{
+    border-top: 1px solid;
+    min-height: calc(100vh - 80px);
+    display: flex;
+
+}
+.sidebar{
+    /* border: 2px solid red; */
+    height: calc(100vh - 80px);
+    width: 25vw;
+    background-color: #d4e8f0;
+}
+.iframe iframe{
+    height: calc(100vh - 80px);
+    width: calc(100vw - 25vw);
+}
+.sideList{
+    border: 2px solid blue;
+}
+.sideList li{
+    border: 2px solid red;
+    padding: 2vmin;
+}
