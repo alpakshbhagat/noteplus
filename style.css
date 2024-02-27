@@ -334,9 +334,10 @@ padding: 3px;
 .sub-cards{
     /* border: 2px solid red; */
     /* height: 300px; */
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap:  5vmin;
-    overflow-y: hidden;
+    
 }
 
 .aaaa div{
@@ -345,10 +346,14 @@ padding: 3px;
     /* border: 2px solid red; */
     border-radius: 8%;
 }
+.aaaa a{
+    text-decoration: none;
+}
 .aaaa div h4{
     font-size: 22px;
     text-align: center;
-    color: #3D5F6F;
+    
+    color: #fff;
 }
 .aaaa div p{
     padding: 1vmin 2vmin;

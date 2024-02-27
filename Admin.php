@@ -71,6 +71,7 @@ require "connect.php";
 
                             //dropdown
                             echo '<select class="dropdown" name="subject"  required>';
+                            echo '<option value="" disabled selected>Choose subject:</option>';
                             while ($row = mysqli_fetch_array($result)) {
                                 echo '<option value="' . $row[0] . '">' . $row[0] . '</option>';
                             }

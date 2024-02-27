@@ -106,9 +106,7 @@
                             if ($tableName !== 'feedback') {
                                 echo "<div class='aaaa'>
                                 <div>
-                                    <a href='pdf.php?id=".$tables[$row[0]]."'><h4>$row[0]</h4>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam iure, quo quas et autem vero aliquid. Laudantium recusandae modi numquam?</p>
-                                    </a>
+                                    <a href='pdf.php?id=".$tables[$row[0]]."'><h4>$row[0]</h4></a>
                                 </div>
                             </div>";
                             }
