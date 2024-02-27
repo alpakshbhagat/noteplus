@@ -44,10 +44,9 @@
                         $tables[$row[0]]=$row[0];
                         $tableName = $row[0];
                             if ($tableName !== 'feedback') {
-                                echo "<div class='aaaa'>
-                                <div>
+                                echo "<div class='subjectCards'>
+                                <div class='card'>
                                     <a href='pdf.php?id=".$tables[$row[0]]."'><h4>$row[0]</h4>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam iure, quo quas et autem vero aliquid. Laudantium recusandae modi numquam?</p>
                                     </a>
                                 </div>
                             </div>";
@@ -77,13 +76,14 @@
     </div>
     <div class="three padding">
         <div>
-            <img src="github.png" alt="" class="imglog github">
-            <img src="linkedin.png" alt="" class="imglogo">
-            <img src="facebook.png" alt=""  class="secondlogo"  >
-            <img src="instagram.png" alt=""  class="secondlogo">
+            <img src="github.png" alt="" class="imglog github logo">
+            <img src="linkedin.png" alt="" class="imglogo logo">
+            <img src="facebook.png" alt=""  class="secondlogo logo"  >
+            <img src="instagram.png" alt=""  class="secondlogo logo">
         </div>
         
     </div>
 </footer>
+<script src="main.js"></script>
 </body>
 </html>

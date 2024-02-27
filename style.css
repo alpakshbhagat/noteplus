@@ -16,6 +16,7 @@
     
     /* height: 80px; */
     /* background-color: aqua; */
+    /* position: fixed; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,6 +46,11 @@
     border-radius: 5px;
     transform: scaleX(0);
     transition: transform 200ms ease-in-out;   
+}
+.navbar ul li:hover{
+    scale: 1.08;
+    translate: 0 -2px;
+    transition: .2s;
 }
 .navbar ul li:hover:after{
     transform: scaleX(1);
@@ -116,6 +122,10 @@
     justify-content: center;
     align-items: center;
 }
+.two a:hover{
+    color: #00c3ff;
+    transition: .5s;
+}
 .two a{
     text-decoration: none;
     font-weight: 600;
@@ -151,6 +161,11 @@
 }
 .img{
     margin: 0 2vmax;
+}
+.logo:hover{
+    scale: 1.3;
+    translate: 0 -5px ;
+    transition: .4s;
 }
 .toggle.active{
     position: absolute;
@@ -286,7 +301,7 @@ button{
     scale: 0.9;
 }
 .card{
-    
+    height: 100%;
     cursor: pointer;
     border-radius:10px;
     width: 30vmax;
@@ -294,6 +309,7 @@ button{
     -moz-box-shadow: -1px -1px 20px 3px rgba(184,176,175,1);
     box-shadow: -1px -1px 20px 3px rgba(184,176,175,1);
     /* border: 2px solid red   ; */
+    transition: .3s;
 }
 .card:hover{
     box-shadow: -1px -1px 40px 3px rgb(14, 12, 12);
@@ -340,22 +356,22 @@ padding: 3px;
     
 }
 
-.aaaa div{
+.subjectCards div{
     width: 20vmax;
-    background-color: #D4D7D0;
+    background-color: #113039;
     /* border: 2px solid red; */
     border-radius: 8%;
 }
-.aaaa a{
+.subjectCards a{
     text-decoration: none;
 }
-.aaaa div h4{
+.subjectCards div h4{
     font-size: 22px;
     text-align: center;
     
     color: #fff;
 }
-.aaaa div p{
+.subjectCards div p{
     padding: 1vmin 2vmin;
     
 }
@@ -368,5 +384,15 @@ padding: 3px;
         width: 350px;
 
     }
-    
+    .sub-cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .subjectCards div{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
 }

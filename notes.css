@@ -1,3 +1,15 @@
 .card-container{
     border-top: 1px solid black ;
+    
+}
+.Cards{
+    min-height: 58vh;
+}
+@media (max-width: 600px) {
+    .Cards{
+        min-height: 52vh;
+    }
+    .sub-cards{
+        padding-top: 4%;
+    }
 }

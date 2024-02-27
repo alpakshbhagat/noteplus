@@ -22,7 +22,7 @@
             <div class="dash dash3"></div>
         </div>
         <ul class="nav-menu">
-            <li class="nav-items"><a href="index.php" class="nav-links">Home</a></li>
+            <li class="nav-items"><a href="index.php" class="nav-links" >Home</a></li>
             <li class="nav-items"><a href="notes.php" class="nav-links">Notes</a></li>
             <li class="nav-items"><a href="About.php" class="nav-links">About</a></li>
             <li class="nav-items"><a href="contact.php" class="nav-links">Contact</a></li>
@@ -58,7 +58,7 @@
                     <div class="card">
                         <img src="bca.jpg" alt="">
                         <h4>Computer Department</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam iure, quo quas et autem vero aliquid. Laudantium recusandae modi numquam?</p>
+                        <p>The Computer Department is a dynamic hub of innovation and learning, where cutting-edge technology meets creative problem-solving. Students explore programming, networking, and cybersecurity, preparing for exciting careers in the ever-evolving tech industry.</p>
                     </div>
                 </button>
             </a>
@@ -69,7 +69,7 @@
                     <div class="card">
                         <img src="science.jpg" alt="">
                         <h4>Science Department</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam iure, quo quas et autem vero aliquid. Laudantium recusandae modi numquam?</p>
+                        <p>The Science Department offers a comprehensive curriculum in biology, chemistry, physics, and environmental science, fostering a deep understanding of scientific principles through hands-on learning, experimentation, research, analysis, collaboration, and innovation.</p>
                      </div>
                 </button>
             </a>
@@ -80,7 +80,7 @@
                     <div class="card">
                         <img src="comerce.jpg" alt="">
                         <h4>Commerce Department</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam iure, quo quas et autem vero aliquid. Laudantium recusandae modi numquam?</p>
+                        <p>The Commerce Department offers a diverse curriculum covering accounting, economics, business management, and marketing. Students gain practical skills and knowledge for careers in finance, entrepreneurship, and management in today's global business environment.</p>
                     </div>
                 </button>
             </a>
@@ -104,8 +104,8 @@
                         $tables[$row[0]]=$row[0];
                         $tableName = $row[0];
                             if ($tableName !== 'feedback') {
-                                echo "<div class='aaaa'>
-                                <div>
+                                echo "<div class='subjectCards'>
+                                <div class='card'>
                                     <a href='pdf.php?id=".$tables[$row[0]]."'><h4>$row[0]</h4></a>
                                 </div>
                             </div>";
@@ -135,10 +135,10 @@
     </div>
     <div class="three padding">
         <div>
-            <img src="github.png" alt="" class="imglog github">
-            <img src="linkedin.png" alt="" class="imglogo">
-            <img src="facebook.png" alt=""  class="secondlogo"  >
-            <img src="instagram.png" alt=""  class="secondlogo">
+            <img src="github.png" alt="" class="imglog github logo">
+            <img src="linkedin.png" alt="" class="imglogo logo">
+            <img src="facebook.png" alt=""  class="secondlogo logo"  >
+            <img src="instagram.png" alt=""  class="secondlogo logo">
         </div>
         
     </div>

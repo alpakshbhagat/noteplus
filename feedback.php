@@ -90,13 +90,13 @@ require "connect.php";
     </div>
     <div class="three padding">
       <div>
-        <img src="github.png" alt="" class="imglog github">
-        <img src="linkedin.png" alt="" class="imglogo">
-        <img src="facebook.png" alt=""  class="secondlogo"  >
-        <img src="instagram.png" alt=""  class="secondlogo">
+        <img src="github.png" alt="" class="imglog github logo">
+        <img src="linkedin.png" alt="" class="imglogo logo">
+        <img src="facebook.png" alt=""  class="secondlogo logo"  >
+        <img src="instagram.png" alt=""  class="secondlogo logo">
       </div>
     </div>
   </footer>
-
+  <script src="main.js"></script>
 </body>
 </html>

@@ -37,14 +37,14 @@
             <div class="aboutCard">
 
             <div class="card1">
-                <img src="https://picsum.photos/200" alt=""  class="selfpic"/>
+                <img src="alpaksh.jpg" alt=""  class="selfpic"/>
                 <div>
                 <h2>Alpaksh Dogra</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga.</p>
+                <p>I'm Alpaksh Dogra, a BCA student and full-stack web developer. With a passion for web development and proficiency in multiple languages, I enjoy crafting dynamic and innovative solutions for diverse projects.</p>
                 <div class="icons">
-                    <a href="https://github.com/alpakshbhagat" target="_blank"><img src="github.png" alt="" class="git"></a>
-                    <a href="" target="_blank"><img src="linkedin.png" alt="" class="linkedin"></a>
-                    <a href="" target="_blank"><img src="instagram.png" alt="" class="instagram"></a>
+                    <a href="https://github.com/alpakshbhagat" target="_blank"><img src="github.png" alt="" class="git logo"></a>
+                    <a href="https://www.linkedin.com/in/alpaksh-dogra-961297234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=andriod_app" target="_blank"><img src="linkedin.png" alt="" class="linkedin logo"></a>
+                    <a href="https://www.instagram.com/_alpaksh_bhagat__" target="_blank"><img src="instagram.png" alt="" class="instagram logo"></a>
                 </div>
                 </div>
             </div>
@@ -55,9 +55,9 @@
                 <h2>Vanshika Bansotra</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga.</p>
                 <div class="icons">
-                    <a href=""  target="_blank"><img src="github.png" alt="" class="git"></a>
-                    <a href=""  target="_blank"><img src="linkedin.png" alt="" class="linkedin"></a>
-                    <a href=""  target="_blank"><img src="instagram.png" alt="" class="instagram"></a>
+                    <a href=""  target="_blank"><img src="github.png" alt="" class="git logo"></a>
+                    <a href=""  target="_blank"><img src="linkedin.png" alt="" class="linkedin logo"></a>
+                    <a href=""  target="_blank"><img src="instagram.png" alt="" class="instagram logo"></a>
                 </div>
                 </div>
             </div>
@@ -68,9 +68,9 @@
                 <h2>Pardeep Singh</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga.</p>
                 <div class="icons">
-                    <a href="" target="_blank"><img src="github.png" alt="" class="git"></a>
-                    <a href="" target="_blank"><img src="linkedin.png" alt="" class="linkedin"></a>
-                    <a href="https://www.instagram.com/pardeepsingh___3223" target="_blank"><img src="instagram.png" alt="" class="instagram"></a>
+                    <a href="" target="_blank"><img src="github.png" alt="" class="git logo"></a>
+                    <a href="" target="_blank"><img src="linkedin.png" alt="" class="linkedin logo"></a>
+                    <a href="https://www.instagram.com/pardeepsingh___3223" target="_blank"><img src="instagram.png" alt="" class="instagram logo"></a>
                 </div>
                 </div>
             </div>
@@ -97,10 +97,10 @@
     </div>
     <div class="three padding">
         <div>
-            <img src="github.png" alt="" class="imglog github">
-            <img src="linkedin.png" alt="" class="imglogo">
-            <img src="facebook.png" alt=""  class="secondlogo"  >
-            <img src="instagram.png" alt=""  class="secondlogo">
+            <img src="github.png" alt="" class="imglog github logo">
+            <img src="linkedin.png" alt="" class="imglogo logo">
+            <img src="facebook.png" alt=""  class="secondlogo logo"  >
+            <img src="instagram.png" alt=""  class="secondlogo logo">
         </div>
         
     </div>

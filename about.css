@@ -19,7 +19,13 @@
     padding: 5vmin 0;
 
 }
-
+.selfpic{
+    transition: transform 0.3s;
+}
+.selfpic:hover{
+    box-shadow: -1px -1px 40px 3px rgb(14, 12, 12);
+    transform: scale(1.05);
+}
 .card1{
     width: 30vmax;
 }
