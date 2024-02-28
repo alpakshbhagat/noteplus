@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .welcome{
+            /* border: 2px solid red; */
+        }
+        h2{
+            font-size: 100px;
+            font-family: 'Agbalumo', system-ui;
+            color: #17BDEF;
+        }
+        h2 span{
+            font-family: 'Agbalumo', system-ui;
+            color: #3D5F6F;
+        }
+        p{
+            font-family: 'Poppins', system-ui;
+            font-size: 30px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .container{
+                align-items:self-start;
+            }
+            h2{
+                font-size: 50px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome">
+            <h2>Welcome to <span>NotePlus</span></h2>
+            <p>Your digital e-learning platform.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -12,6 +12,9 @@
         $row = mysqli_fetch_assoc($result);
             $pdfData = $row['file'];
             header('Content-Type: application/pdf');
+            header('Content-Disposition: inline; filename="' . $filename . '"');
+            header('Content-Transfer-Encoding: binary');
+            header('Accept-Ranges: bytes');
             echo $pdfData;
         }
     

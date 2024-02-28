@@ -12,4 +12,4 @@ function toggleAdder(){
         counter++;
     }
 }
-wrapper.addEventListener("click", toggleAdder);
+

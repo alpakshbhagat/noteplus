@@ -8,16 +8,26 @@
     /* border: 2px solid red; */
     height: calc(100vh - 80px);
     width: 25vw;
-    background-color: #d4e8f0;
+    background-color: #3D5F6F;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 .iframe iframe{
     height: calc(100vh - 80px);
     width: calc(100vw - 25vw);
 }
-.sideList{
-    border: 2px solid blue;
-}
+
 .sideList li{
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    border-bottom: 1px solid #fff;
     padding: 2vmin;
+}
+.sideList li:hover{
+    background-color: #61b3da;
+    color: #3D5F6F;
+    transition: .2s;
+}
+.sideList a{
+    text-decoration: none;
+    color: #fff;
 }

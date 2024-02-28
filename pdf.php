@@ -29,7 +29,7 @@ require "connect.php";
         </ul> 
     </div>
 
-    <div class="pdfContainer">
+    <div class="pdfContainer" oncontextmenu="return false;">
         <div class="sidebar">
             <?php
                 $id = $_GET['id'];
@@ -44,7 +44,7 @@ require "connect.php";
                     <ul class="sideList">
                     <?php
                         while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<li><a href='description.php?unit=" . $row['unit'] . "&subject=".$id."#toolbar=0' target='iframe'>" . $row['unit'] . "</a></li>";
+                            echo "<a href='description.php?unit=" . $row['unit'] . "&subject=".$id."#toolbar=0' target='iframe'><li>" . $row['unit'] . "</li></a>";
 
 
                         }
@@ -54,7 +54,7 @@ require "connect.php";
                     
         </div>
         <div class="iframe">
-            <iframe src="index.php" frameborder="0" name="iframe"></iframe>
+            <iframe src="welcome.html" frameborder="0" name="iframe" oncontextmenu="return false;"></iframe>
         </div>
     </div>
 
@@ -76,14 +76,15 @@ require "connect.php";
     </div>
     <div class="three padding">
         <div>
-            <img src="github.png" alt="" class="imglog github">
-            <img src="linkedin.png" alt="" class="imglogo">
-            <img src="facebook.png" alt=""  class="secondlogo"  >
-            <img src="instagram.png" alt=""  class="secondlogo">
+            <img src="github.png" alt="" class="imglog github logo">
+            <img src="linkedin.png" alt="" class="imglogo logo">
+            <img src="facebook.png" alt=""  class="secondlogo logo"  >
+            <img src="instagram.png" alt=""  class="secondlogo logo">
         </div>
         
     </div>
 </footer>
     <script src="main.js"></script>
+    
 </body>
 </html>

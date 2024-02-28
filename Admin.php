@@ -28,14 +28,7 @@ require "connect.php";
             <li class="nav-items"><a href="contact.php" class="nav-links">Contact</a></li>
             <li class="nav-items"><a href="feedback.php" class="nav-links">Feedback</a></li>
         </ul> 
-        <!-- <ul class="toggle">
-            <li class="nav-items"><a href="index.php" class="nav-links">Home</a></li>
-            <li class="nav-items"><a href="notes.php" class="nav-links">Notes</a></li>
-            <li class="nav-items"><a href="about.php" class="nav-links">About</a></li>
-            <li class="nav-items"><a href="contact.php" class="nav-links">Contact</a></li>
-            <li class="nav-items"><a href="feedback.php" class="nav-links">Feedback</a></li>
-        </ul> -->
-    </div> 
+    </div>
     
 
     <div class="container">
@@ -118,10 +111,10 @@ require "connect.php";
     </div>
     <div class="three padding">
         <div>
-            <img src="github.png" alt="" class="imglog github">
-            <img src="linkedin.png" alt="" class="imglogo">
-            <img src="facebook.png" alt=""  class="secondlogo"  >
-            <img src="instagram.png" alt=""  class="secondlogo">
+            <img src="github.png" alt="" class="imglog github logo">
+            <img src="linkedin.png" alt="" class="imglogo logo">
+            <img src="facebook.png" alt=""  class="secondlogo logo"  >
+            <img src="instagram.png" alt=""  class="secondlogo logo">
         </div>
         
     </div>

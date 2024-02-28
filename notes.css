@@ -1,12 +1,15 @@
 .card-container{
     border-top: 1px solid black ;
-    height: 67.3vh;
-    overflow-y: scroll;
+    
+}
+.Cards{
+    min-height: 58vh;
 }
 @media (max-width: 600px) {
-    .card-container{
-        display: flex;
-        align-items: center;
+    .Cards{
+        min-height: 52vh;
     }
-    
+    .sub-cards{
+        padding-top: 4%;
+    }
 }
