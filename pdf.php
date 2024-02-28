@@ -29,7 +29,11 @@ require "connect.php";
         </ul> 
     </div>
 
+<<<<<<< HEAD
     <div class="pdfContainer" oncontextmenu="return false;">
+=======
+    <div class="pdfContainer">
+>>>>>>> 1fc352f8a8c9b284872eed302708f3347a93b930
         <div class="sidebar">
             <?php
                 $id = $_GET['id'];
@@ -44,7 +48,11 @@ require "connect.php";
                     <ul class="sideList">
                     <?php
                         while ($row = mysqli_fetch_assoc($result)) {
+<<<<<<< HEAD
                             echo "<a href='description.php?unit=" . $row['unit'] . "&subject=".$id."#toolbar=0' target='iframe'><li>" . $row['unit'] . "</li></a>";
+=======
+                            echo "<li><a href='description.php?unit=" . $row['unit'] . "&subject=".$id."#toolbar=0' target='iframe'>" . $row['unit'] . "</a></li>";
+>>>>>>> 1fc352f8a8c9b284872eed302708f3347a93b930
 
 
                         }
@@ -54,7 +62,11 @@ require "connect.php";
                     
         </div>
         <div class="iframe">
+<<<<<<< HEAD
             <iframe src="welcome.html" frameborder="0" name="iframe" oncontextmenu="return false;"></iframe>
+=======
+            <iframe src="index.php" frameborder="0" name="iframe"></iframe>
+>>>>>>> 1fc352f8a8c9b284872eed302708f3347a93b930
         </div>
     </div>
 
@@ -85,6 +97,9 @@ require "connect.php";
     </div>
 </footer>
     <script src="main.js"></script>
+<<<<<<< HEAD
     
+=======
+>>>>>>> 1fc352f8a8c9b284872eed302708f3347a93b930
 </body>
 </html>

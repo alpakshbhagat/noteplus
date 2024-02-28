@@ -12,4 +12,8 @@ function toggleAdder(){
         counter++;
     }
 }
+<<<<<<< HEAD
 
+=======
+wrapper.addEventListener("click", toggleAdder);
+>>>>>>> 1fc352f8a8c9b284872eed302708f3347a93b930
