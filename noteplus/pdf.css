@@ -16,14 +16,16 @@
     height: calc(100vh - 80px);
     width: calc(100vw - 25vw);
 }
-<<<<<<< HEAD
-
-=======
-.sideList{
-    /* border: 2px solid blue; */
-    
+.overlay{
+    height: calc(100vh - 80px);
+    width: calc(100vw - 25.7vw);
+    /* background-color: red; */
+    position: absolute;
+    bottom: -3px;
+    right: 12px;
+    background-color: transparent;
+    z-index: 100;
 }
->>>>>>> 1fc352f8a8c9b284872eed302708f3347a93b930
 .sideList li{
     /* border: 2px solid red; */
     border-bottom: 1px solid #fff;
@@ -34,11 +36,7 @@
     color: #3D5F6F;
     transition: .2s;
 }
-<<<<<<< HEAD
 .sideList a{
-=======
-.sideList li a{
->>>>>>> 1fc352f8a8c9b284872eed302708f3347a93b930
     text-decoration: none;
     color: #fff;
 }

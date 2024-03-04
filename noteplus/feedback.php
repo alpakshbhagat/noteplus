@@ -85,7 +85,7 @@ require "connect.php";
     <div class="two padding">
         <a href="index.php">Home</a>
         <a href="notes.php">Notes</a>
-        <a href="About.php">About</a>
+        <a href="about.php">About</a>
         <a href="contact.php">Contact</a>
     </div>
     <div class="three padding">

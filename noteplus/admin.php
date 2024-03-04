@@ -67,15 +67,22 @@ require "connect.php";
                     <h3 style="color: #fff; padding-bottom: 2%; text-decoration:underline">Upload your files here.</h3>
                     <?php
                         $sql = "SHOW TABLES";
+                        $tables = [];
                         $result = mysqli_query($conn,$sql);
-
+                        
                             //dropdown
                             echo '<select class="dropdown" name="subject"  required>';
                             echo '<option value="" disabled selected>Choose subject:</option>';
+                        
                             while ($row = mysqli_fetch_array($result)) {
+                                $tables[$row[0]]=$row[0];
+                                $tableName = $row[0];
+                                    if ($tableName !== 'feedback') {
                                 echo '<option value="' . $row[0] . '">' . $row[0] . '</option>';
                             }
+                        }
                             echo '</select>';
+                        
                     ?>
                     
                     
@@ -106,7 +113,7 @@ require "connect.php";
     <div class="two padding">
         <a href="index.php">Home</a>
         <a href="notes.php">Notes</a>
-        <a href="About.php">About</a>
+        <a href="about.php">About</a>
         <a href="contact.php">Contact</a>
     </div>
     <div class="three padding">

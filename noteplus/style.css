@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
-=======
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
->>>>>>> 1fc352f8a8c9b284872eed302708f3347a93b930
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
 
 :root{
@@ -16,7 +12,6 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-<<<<<<< HEAD
 body{
     
     font-family: 'Poppins';
@@ -25,8 +20,6 @@ body{
     font-family: 'Poppins';
     src: url(Poppins.ttf);
 }
-=======
->>>>>>> 1fc352f8a8c9b284872eed302708f3347a93b930
 .navbar{
     
     /* height: 80px; */
@@ -46,6 +39,7 @@ body{
 .navbar ul li{
     list-style: none;
     padding: 27px; ;
+    z-index: 100000;
 }
 .dash{
     height: 5px;
@@ -381,15 +375,18 @@ padding: 3px;
     text-decoration: none;
 }
 .subjectCards div h4{
-    font-size: 22px;
+    /* font-size: 22px; */
     text-align: center;
-    
+    font-size: 35px;
     color: #fff;
 }
 .subjectCards div p{
     padding: 1vmin 2vmin;
-    
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
 }
+
 
 @media (max-width: 600px) {
     .card-holder{

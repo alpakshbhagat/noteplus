@@ -20,7 +20,7 @@
         <ul class="nav-menu" id="menu">
             <li class="nav-items"><a href="index.php" class="nav-links">Home</a></li>
             <li class="nav-items"><a href="notes.php" class="nav-links">Notes</a></li>
-            <li class="nav-items"><a href="About.php" class="nav-links">About</a></li>
+            <li class="nav-items"><a href="about.php" class="nav-links">About</a></li>
             <li class="nav-items"><a href="contact.php" class="nav-links">Contact</a></li>
         </ul>
         
@@ -92,7 +92,7 @@
     <div class="two padding">
         <a href="index.php">Home</a>
         <a href="notes.php">Notes</a>
-        <a href="About.php">About</a>
+        <a href="about.php">About</a>
         <a href="contact.php">Contact</a>
     </div>
     <div class="three padding">
