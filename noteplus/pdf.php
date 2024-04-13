@@ -5,9 +5,10 @@ require "connect.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf_viewer.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="pdf.css">
@@ -30,62 +31,78 @@ require "connect.php";
     </div>
 
     <div class="pdfContainer" oncontextmenu="return false;">
-        <div class="sidebar">
-            <?php
-                $id = $_GET['id'];
-                
+    <nav class="sidebar close">
+        <header>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+            <div class="menu-bar">
+                <div class="menu">
+                            <?php
+                            $id = $_GET['id'];
 
-                $sql = "SELECT * FROM `$id`";
-                $result = mysqli_query($conn, $sql);
+                            $sql = "SELECT * FROM `$id`";
+                            $result = mysqli_query($conn, $sql);
 
-                if (mysqli_num_rows($result) > 0) {
-                    
-                    ?>
-                    <ul class="sideList">
-                    <?php
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<a href='description.php?unit=" . $row['unit'] . "&subject=".$id."#toolbar=0' target='iframe'><li>" . $row['unit'] . "</li></a>";
-
-
-                        }
-                    }
-                    ?>
-                    </ul>
-                    
+                            if (mysqli_num_rows($result) > 0) {
+                                ?>
+                                <ul class="menu-links">
+                                    <li class="nav-link" style="display: flex; flex-direction:column">
+                                    <?php
+                                        while ($row = mysqli_fetch_assoc($result)) {
+                                            echo "<a href='description.php?unit=" . $row['unit'] . "&subject=" . $id. "' target='iframe' style='padding: 5% 2%'><span class='text nav-text'>" . $row['unit'] . "</span></a>";
+                                        }
+                                    ?>
+                                    </li>
+                                </ul>
+                                <?php
+                            }
+                                ?>
+                </div>
+            </div>
+    </nav>
+    <section class="home">
+        <div class="text">
+            <!-- <div class="overlay"></div> -->
+        <iframe src="welcome.html" frameborder="0" name="iframe" id="iframe"style="width: 100%;height: 100vh; z-index:1000000000000000 "></iframe>
         </div>
-        <div class="iframe">
-            <iframe src="welcome.html" frameborder="0" name="iframe" oncontextmenu="return false;"></iframe>
-            <div class="overlay"></div>
-        </div>
+    </section>
     </div>
-
-
-
-        <!-- footer -->
-        <footer class="footer">
-    <div class="one padding">
-        <h2>Community</h2>
-        <p>Join our community of students and teachers to get the best learning experience.</p>
-        <p>&copy; All rights Reserved | <?php echo date("Y")?></p>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="one padding">
+            <h2>Community</h2>
+            <p>Join our community of students and teachers to get the best learning experience.</p>
+            <p>&copy; All rights Reserved | <?php echo date("Y")?></p>
+        </div>
+        <div class="two padding">
+            <a href="index.php">Home</a>
+            <a href="notes.php">Notes</a>
+            <a href="about.php">About</a>
+            <a href="contact.php">Contact</a>
+        </div>
+        <div class="three padding">
+            <div>
+                <img src="github.png" alt="" class="imglog github logo">
+                <img src="linkedin.png" alt="" class="imglogo logo">
+                <img src="facebook.png" alt=""  class="secondlogo logo"  >
+                <img src="instagram.png" alt=""  class="secondlogo logo">
+            </div>
+        </div>
         
-    </div>
-    <div class="two padding">
-        <a href="index.php">Home</a>
-        <a href="notes.php">Notes</a>
-        <a href="about.php">About</a>
-        <a href="contact.php">Contact</a>
-    </div>
-    <div class="three padding">
-        <div>
-            <img src="github.png" alt="" class="imglog github logo">
-            <img src="linkedin.png" alt="" class="imglogo logo">
-            <img src="facebook.png" alt=""  class="secondlogo logo"  >
-            <img src="instagram.png" alt=""  class="secondlogo logo">
-        </div>
-        
-    </div>
-</footer>
+    </footer>
     <script src="main.js"></script>
-    
+    <script>
+    const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle")
+      modeText = body.querySelector(".mode-text");
+    toggle.addEventListener("click", () => {
+      sidebar.classList.toggle("close");
+    })
+    searchBtn.addEventListener("click", () => {
+      sidebar.classList.remove("close");
+    })
+
+    </script>
 </body>
 </html>

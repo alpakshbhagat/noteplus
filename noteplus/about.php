@@ -30,8 +30,13 @@
     <!-- main -->
     <div class="container1">
         <div class="innerdiv">
-        
+            
             <div class="top">
+                <div class="box">
+                    <h2>NotePlus</h2>
+                    <p>Digital e-learning platform</p>
+                    <p>NotePlus is a website created for students and teachers to interact and share educational resources. It features notes uploaded by teachers, which are automatically converted to images for easy viewing by students. The site includes a search function for students to find specific notes and provides a platform for students to ask questions and seek clarification from teachers. NotePlus aims to enhance the learning experience by making educational resources more accessible and interactive.</p>
+                </div>
                 <h1>Our Community</h1>
             </div>
             <div class="aboutCard">
@@ -40,7 +45,7 @@
                 <img src="alpaksh.jpg" alt=""  class="selfpic"/>
                 <div>
                 <h2>Alpaksh Dogra</h2>
-                <p>I'm Alpaksh Dogra, a BCA student and full-stack web developer. With a passion for web development and proficiency in multiple languages, I enjoy crafting dynamic and innovative solutions for diverse projects.</p>
+                <p>I'm Alpaksh Dogra, a BCA student and full-stack web developer. With a passion for web development and proficiency in multiple languages, I enjoy crafting dynamic and innovative solutions for diverse projects, constantly seeking new opportunities to grow.</p>
                 <div class="icons">
                     <a href="https://github.com/alpakshbhagat" target="_blank"><img src="github.png" alt="" class="git logo"></a>
                     <a href="https://www.linkedin.com/in/alpaksh-dogra-961297234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=andriod_app" target="_blank"><img src="linkedin.png" alt="" class="linkedin logo"></a>
@@ -50,10 +55,10 @@
             </div>
 
             <div class="card1">
-                <img src="https://picsum.photos/200" alt=""  class="selfpic"/>
+                <img src="vanshika.jpeg" alt=""  class="selfpic"/>
                 <div>
                 <h2>Vanshika Bansotra</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga.</p>
+                <p>I am Vanshika Bansotra, a passionate BCA student. As a student myself, I understand the importance of accessible learning materials. That's why created NotePlus – to provide a seamless platform for students  to access and share educational resources.</p>
                 <div class="icons">
                     <a href=""  target="_blank"><img src="github.png" alt="" class="git logo"></a>
                     <a href=""  target="_blank"><img src="linkedin.png" alt="" class="linkedin logo"></a>
@@ -63,10 +68,10 @@
             </div>
 
             <div class="card1">
-                <img src="https://picsum.photos/200" alt=""  class="selfpic"/>
+                <img src="pardeep.jpg" alt=""  class="selfpic"/>
                 <div>
                 <h2>Pardeep Singh</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, omnis. Esse illum quo iusto cumque explicabo, ad quisnam rerum maiores eum quos, perferendis fuga.</p>
+                <p>My name is Pardeep Singh. I am a student pursuing BCA. As a BCA student, I am passionate about exploring the vast realm of computer science and its practical applications. Additionally, I am actively involved in various extracurricular activities.</p>
                 <div class="icons">
                     <a href="" target="_blank"><img src="github.png" alt="" class="git logo"></a>
                     <a href="" target="_blank"><img src="linkedin.png" alt="" class="linkedin logo"></a>

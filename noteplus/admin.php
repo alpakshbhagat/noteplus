@@ -9,7 +9,7 @@ require "connect.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Admin.css">
+    <link rel="stylesheet" href="admin.css">
     <title>Admin Login</title>
 </head>
 <body>
@@ -67,23 +67,21 @@ require "connect.php";
                     <h3 style="color: #fff; padding-bottom: 2%; text-decoration:underline">Upload your files here.</h3>
                     <?php
                         $sql = "SHOW TABLES";
-                        $tables = [];
-                        $result = mysqli_query($conn,$sql);
-                        
-                            //dropdown
-                            echo '<select class="dropdown" name="subject"  required>';
-                            echo '<option value="" disabled selected>Choose subject:</option>';
-                        
-                            while ($row = mysqli_fetch_array($result)) {
-                                $tables[$row[0]]=$row[0];
-                                $tableName = $row[0];
-                                    if ($tableName !== 'feedback') {
-                                echo '<option value="' . $row[0] . '">' . $row[0] . '</option>';
+                        $result = mysqli_query($conn, $sql);
+
+                        //dropdown
+                        echo '<select class="dropdown" name="subject" required>';
+                        echo '<option value="" disabled selected>Choose subject:</option>';
+                        while ($row = mysqli_fetch_array($result)) {
+                            $tableName = $row[0];
+                            // Skip adding the feedback table to the dropdown
+                            if ($tableName !== 'feedback') {
+                                echo '<option value="' . $tableName . '">' . $tableName . '</option>';
                             }
                         }
-                            echo '</select>';
-                        
+                        echo '</select>';
                     ?>
+
                     
                     
                     
